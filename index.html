@@ -1,9 +1,581 @@
-<html>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Project</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .page-shell {
+            max-width: 850px;
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.15);
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 10px 0 20px;
+        }
+
+        .content-card {
+            background: white;
+            border: none;
+            border-left: 3px solid #35b9f5 !important;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,.08);
+        }
+
+        .content-card .card-body {
+            padding: 18px;
+        }
+
+        h2.section-title {
+            color: #2b6cb0;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border-bottom: 1px solid #4299e1;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin-top: 15px;
+        }
+
+        h4 {
+            font-size: .95rem;
+            margin-top: 12px;
+        }
+
+        p {
+            font-size: .9rem;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            color: #dd6b20;
+            background: #edf2f7;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: .82rem;
+            margin: 12px 0;
+        }
+
+        pre code {
+            color: inherit;
+            background: transparent;
+            padding: 0;
+        }
+
+        blockquote {
+            background: linear-gradient(110deg, #b7eeee, #ffd2e1);
+            border-left: 3px solid #ff8aa7;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        ul, ol {
+            padding-left: 22px;
+            margin-bottom: 12px;
+        }
+
+        li {
+            margin-bottom: 4px;
+            font-size: .9rem;
+        }
+
+        .table-responsive {
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 12px 0;
+        }
+
+        .table {
+            background: white;
+            font-size: .85rem;
+        }
+
+        .table thead th {
+            background: #3182ce;
+            color: white;
+        }
+
+        .example-box {
+            background: #f8fafc;
+            border: 1px dashed #90cdf4;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 12px;
+        }
+
+        .example-form {
+            background: white;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .example-form label {
+            display: block;
+            font-size: .85rem;
+            margin-bottom: 4px;
+        }
+
+        .example-form .form-control,
+        .example-form .form-select {
+            font-size: .9rem;
+            margin-bottom: 10px;
+        }
+
+        .practice-card {
+            background: linear-gradient(120deg, #ff9aab, #ffc5df);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 15px;
+        }
+
+        .gradient-card {
+            background: linear-gradient(110deg, #b7eeee, #ffd2e1);
+            border-radius: 6px;
+            padding: 14px;
+            margin-top: 12px;
+        }
+
+        .conclusion {
+            color: white;
+            text-align: center;
+            background: linear-gradient(120deg, #667eea, #764ba2);
+            border-radius: 8px;
+            padding: 25px 18px;
+        }
+
+        .conclusion p {
+            font-size: .9rem;
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding: 10px 0;
+            }
+
+            .page-shell {
+                padding: 12px;
+                margin: 10px !important;
+                width: auto;
+            }
+
+            .content-card .card-body {
+                padding: 12px;
+            }
+
+            pre {
+                font-size: .75rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-</body>
+<main class="container page-shell my-3 my-lg-4">
 
+    <!-- Header -->
+    <header class="page-header">
+        <h1 class="h3 fw-bold">🌐 HTML Learning Project</h1>
+        <p class="text-secondary small mb-0">
+            Master the Building Blocks of the Web
+        </p>
+    </header>
+
+    <!-- Section 1 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">🚀 What is HTML?</h2>
+
+            <p><strong>HTML (HyperText Markup Language)</strong> is the standard markup language for creating web pages. Think of it as the skeleton or foundation of every website you visit.</p>
+
+            <blockquote>
+                <strong>Key Points:</strong>
+                <ul class="mb-0">
+                    <li><strong>HyperText:</strong> Text with links to other texts</li>
+                    <li><strong>Markup:</strong> A way to annotate text to show structure and meaning</li>
+                    <li><strong>Language:</strong> A set of rules and syntax for creating web content</li>
+                </ul>
+            </blockquote>
+
+            <h3>🏗️ How HTML Works</h3>
+            <p>HTML uses <strong>tags</strong> to define elements. Tags are keywords surrounded by angle brackets like <code>&lt;tagname&gt;</code>. Most tags come in pairs:</p>
+
+            <pre><code>&lt;tagname&gt;Content goes here&lt;/tagname&gt;
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;</code></pre>
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">📋 Basic HTML Structure</h2>
+            <p>Every HTML document follows this basic structure:</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <blockquote>
+                <h3>Structure Breakdown:</h3>
+                <ul class="mb-0">
+                    <li><code>&lt;!DOCTYPE html&gt;</code> Tells the browser this is HTML5</li>
+                    <li><code>&lt;html&gt;</code> Root element of the page</li>
+                    <li><code>&lt;head&gt;</code> Contains metadata (not visible on page)</li>
+                    <li><code>&lt;body&gt;</code> Contains visible content</li>
+                </ul>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">🏷️ Essential HTML Tags</h2>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Purpose</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></td>
+                            <td>Headings (largest to smallest)</td>
+                            <td><code>&lt;h1&gt;Main Title&lt;/h1&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;p&gt;</code></td>
+                            <td>Paragraphs</td>
+                            <td><code>&lt;p&gt;This is text&lt;/p&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;a&gt;</code></td>
+                            <td>Links</td>
+                            <td><code>&lt;a href="url"&gt;Link text&lt;/a&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;img&gt;</code></td>
+                            <td>Images</td>
+                            <td><code>&lt;img src="image.jpg" alt="Description"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;div&gt;</code></td>
+                            <td>Container/section</td>
+                            <td><code>&lt;div&gt;Content here&lt;/div&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></td>
+                            <td>Lists</td>
+                            <td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>🎯 Live Examples:</h3>
+            <div class="example-box">
+                <h1 class="h2 text-center fw-bold">This is an H1 heading</h1>
+                <h2 class="h5 text-primary border-bottom pb-2">This is an H2 heading</h2>
+                <h3>This is an H3 heading</h3>
+                <p>This is a paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
+                <p>Here's a <a href="#">sample link</a>.</p>
+
+                <h4>Unordered List:</h4>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ul>
+
+                <h4>Ordered List:</h4>
+                <ol>
+                    <li>Step one</li>
+                    <li>Step two</li>
+                    <li>Step three</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">📝 HTML Forms</h2>
+            <p>Forms allow users to input data.</p>
+
+            <pre><code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+            <div class="example-box">
+                <h4>Try this form:</h4>
+                <form class="example-form" onsubmit="event.preventDefault(); alert('Form submitted!');">
+                    <label for="ex-name"><strong>Name:</strong></label>
+                    <input class="form-control" type="text" id="ex-name" name="name" placeholder="Enter your name">
+
+                    <label for="ex-email"><strong>Email:</strong></label>
+                    <input class="form-control" type="email" id="ex-email" name="email" placeholder="Enter your email">
+
+                    <label for="ex-subject"><strong>Subject:</strong></label>
+                    <select class="form-select" id="ex-subject" name="subject">
+                        <option value="">Choose a topic...</option>
+                        <option value="question">Question</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Support</option>
+                    </select>
+
+                    <label for="ex-message"><strong>Message:</strong></label>
+                    <textarea class="form-control" id="ex-message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+
+                    <button class="btn btn-primary btn-sm" type="submit">Submit Form</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">🎨 HTML Attributes</h2>
+            <p>Attributes provide additional information about HTML elements:</p>
+
+            <pre><code>&lt;!-- Common attributes --&gt;
+&lt;img src="photo.jpg" alt="A beautiful sunset" width="300" height="200"&gt;
+&lt;a href="https://example.com" target="_blank" title="Visit Example"&gt;Click here&lt;/a&gt;
+&lt;div class="container" id="main-content" style="color: blue;"&gt;Content&lt;/div&gt;</code></pre>
+
+            <div class="gradient-card">
+                <strong>Important Attributes:</strong>
+                <ul class="mb-0">
+                    <li><strong>id:</strong> Unique identifier for an element</li>
+                    <li><strong>class:</strong> Groups elements for styling</li>
+                    <li><strong>src:</strong> Source file for images, videos, etc.</li>
+                    <li><strong>href:</strong> URL for links</li>
+                    <li><strong>alt:</strong> Alternative text for images</li>
+                    <li><strong>style:</strong> Inline CSS styling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">📊 Tables in HTML</h2>
+            <p>Tables organize data in rows and columns:</p>
+
+            <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+            &lt;th&gt;City&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;New York&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+            <div class="example-box">
+                <h4>Sample Table</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Subject</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice Johnson</td>
+                                <td>Mathematics</td>
+                                <td>A+</td>
+                                <td>✅ Passed</td>
+                            </tr>
+                            <tr>
+                                <td>Bob Smith</td>
+                                <td>Physics</td>
+                                <td>B</td>
+                                <td>✅ Passed</td>
+                            </tr>
+                            <tr>
+                                <td>Carol Davis</td>
+                                <td>Chemistry</td>
+                                <td>A</td>
+                                <td>✅ Passed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="practice-card">
+        <h2 class="section-title">💻 Practice Exercises</h2>
+
+        <h3>Beginner Tasks:</h3>
+        <ol>
+            <li>Create a basic HTML page with a title, heading, and paragraph.</li>
+            <li>Add an image with alt text.</li>
+            <li>Create a list of your favorite movies.</li>
+            <li>Build a simple table with your weekly schedule.</li>
+        </ol>
+
+        <h3>Intermediate Tasks:</h3>
+        <ol>
+            <li>Create a contact form with different input types.</li>
+            <li>Build a navigation menu with links.</li>
+            <li>Design a simple blog post layout.</li>
+            <li>Create a photo gallery grid.</li>
+        </ol>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">🗂️ Project Structure</h2>
+            <p>Here's how to organize your HTML project:</p>
+
+            <pre><code>my-website/
+│
+├── index.html        (Main page)
+├── about.html        (About page)
+├── contact.html      (Contact page)
+│
+├── css/
+│   └── styles.css    (CSS stylesheets)
+│
+├── js/
+│   └── script.js     (JavaScript files)
+│
+└── images/
+    ├── logo.png
+    ├── hero-image.jpg
+    └── gallery/
+        ├── photo1.jpg
+        └── photo2.jpg</code></pre>
+        </div>
+    </section>
+
+    <!-- Section 9 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">🎯 Next Steps in Your Learning Journey</h2>
+            <p>After mastering HTML, continue with:</p>
+
+            <div class="gradient-card">
+                <ul class="mb-0">
+                    <li><strong>CSS (Cascading Style Sheets):</strong> Style your HTML elements</li>
+                    <li><strong>JavaScript:</strong> Add interactivity and dynamic behavior</li>
+                    <li><strong>Responsive Design:</strong> Make websites work on all devices</li>
+                    <li><strong>Web Accessibility:</strong> Make websites usable for everyone</li>
+                    <li><strong>Modern Frameworks:</strong> React, Vue.js, or Angular</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10 -->
+    <section class="card content-card">
+        <div class="card-body">
+            <h2 class="section-title">🔧 Development Tools</h2>
+
+            <div class="gradient-card">
+                <strong>Recommended Tools:</strong>
+                <ul class="mb-0">
+                    <li><strong>Text Editors:</strong> VS Code, Sublime Text, Atom</li>
+                    <li><strong>Browsers:</strong> Chrome DevTools, Firefox Developer Tools</li>
+                    <li><strong>Version Control:</strong> Git and GitHub</li>
+                    <li><strong>Online Editors:</strong> CodePen, JSFiddle, Replit</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11 -->
+    <section class="conclusion">
+        <h2 class="h5 fw-bold text-white">🎉 Congratulations!</h2>
+        <p>You've completed the HTML Learning Project! You now understand the fundamentals of HTML and can create your own web pages. Keep practicing and building projects to strengthen your skills.</p>
+        <p class="mb-0"><strong>Remember:</strong> The best way to learn HTML is by doing. Start building your own projects!</p>
+    </section>
+
+</main>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

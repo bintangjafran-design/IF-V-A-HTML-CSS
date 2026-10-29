@@ -1,0 +1,98 @@
+/* Bootstrap 5 is loaded first; these styles preserve the original visual identity. */
+:root {
+    --brand-blue: #3182ce;
+    --brand-blue-dark: #2b6cb0;
+    --ink: #2d3748;
+    --page-bg: #f7fafc;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 1px 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--ink);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+.page-shell {
+    max-width: 850px;
+    padding: 1.5rem;
+    background: #f8f9ff;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(20, 25, 55, .18);
+}
+.page-header { padding: .5rem .5rem 1rem; }
+.page-header h1 { color: #2d3748; margin-bottom: .35rem; }
+.content-card {
+    border-radius: 9px;
+    border-left: 3px solid #35b9f5 !important;
+    overflow: hidden;
+}
+.content-card .card-body { padding: 1.25rem; }
+.section-title {
+    color: var(--brand-blue-dark);
+    border-bottom: 1px solid #4299e1;
+    padding-bottom: .45rem;
+    margin: 0 0 .8rem;
+}
+h3 { color: #2d3748; font-size: 1.08rem; margin-top: 1rem; margin-bottom: .6rem; }
+h4 { color: #4a5568; font-size: .98rem; margin-top: .9rem; }
+p { margin-bottom: .8rem; }
+a { color: var(--brand-blue); font-weight: 600; text-decoration: none; }
+a:hover { color: var(--brand-blue-dark); text-decoration: underline; }
+code {
+    color: #dd6b20;
+    background: #edf2f7;
+    padding: .15rem .3rem;
+    border-radius: 4px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: .9em;
+}
+pre.code-block {
+    background: #2c3e50;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: .8rem 0;
+    font-size: .85rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+pre.code-block code { color: inherit; background: transparent; padding: 0; }
+blockquote {
+    background: linear-gradient(110deg, #b7eeee 0%, #ffd2e1 100%);
+    border-left: 3px solid #ff7f9f;
+    padding: .9rem 1rem;
+    margin: .9rem 0;
+    border-radius: 0 6px 6px 0;
+}
+blockquote p:last-child, blockquote ul:last-child { margin-bottom: 0; }
+ul, ol { padding-left: 1.4rem; margin-bottom: .8rem; }
+li { margin-bottom: .25rem; }
+.table-responsive { border-radius: 6px; border: 1px solid #e2e8f0; margin: .8rem 0; }
+.table { font-size: .9rem; background: #fff; }
+.table thead th { background: #3182ce; color: #fff; border-color: #3182ce; }
+.table td, .table th { padding: .55rem .7rem; }
+.example-form {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    margin: .8rem 0;
+}
+.example-form p { margin-bottom: .8rem; }
+.example-form label { display: inline-block; margin-bottom: .25rem; color: #4a5568; }
+.form-control, .form-select { font-size: .92rem; }
+.btn-primary { background-color: var(--brand-blue); border-color: var(--brand-blue); }
+.btn-primary:hover { background-color: var(--brand-blue-dark); border-color: var(--brand-blue-dark); }
+/* Soft pink highlight for the exercises section. */
+.content-card:has(.section-title) { }
+@media (max-width: 600px) {
+    .page-shell { margin: .75rem !important; padding: .75rem; border-radius: 8px; }
+    .content-card .card-body { padding: .85rem; }
+    pre.code-block { font-size: .78rem; padding: .75rem; }
+    .table { font-size: .8rem; }
+}
